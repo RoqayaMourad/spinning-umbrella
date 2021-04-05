@@ -49,11 +49,11 @@ span {
     font-size: 1.3rem;
     font-style: italic;
 }
-.col-7{
+.content-col{
     overflow: auto;
     height:100%;
 }
-.col-5{
+.img-col{
     overflow:  hidden !important;
 }
 .parent {

@@ -72,7 +72,7 @@ var rotate = gsap.timeline({
   }
 });
 rotate.set(".img", {  x: "50%",
-y: "-50%",
+y: "-50%"
 });
 
 rotate.to('.img', {
