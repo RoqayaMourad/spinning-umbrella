@@ -1,0 +1,142 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+body {
+    overflow: hidden;
+    height:100vh;  
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+.services {
+    height: 100%;
+  }
+.services {
+    background-image: url(./Background-Options.jpg);
+}
+.link-name {
+    margin-right: 0;
+    float: right;
+    background: #1988CD;
+    background: -webkit-linear-gradient(to right, #1988CD 0%, #6B3894 100%);
+    background: -moz-linear-gradient(to right, #1988CD 0%, #6B3894 100%);
+    background: linear-gradient(to right, #1988CD 0%, #6B3894 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+
+.link-name h2 {
+    font-weight: 300;
+}
+.logo {
+    float: left;
+}
+span {
+    background: #1988CD;
+    background: -webkit-linear-gradient(to right, #1988CD 0%, #6B3894 100%);
+    background: -moz-linear-gradient(to right, #1988CD 0%, #6B3894 100%);
+    background: linear-gradient(to right, #1988CD 0%, #6B3894 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 4rem;
+    font-weight: 800;
+    padding-right: 5px;
+}
+.title {
+    color: #1988CD;
+    font-size: 1.3rem;
+    font-style: italic;
+}
+.col-7{
+    overflow: auto;
+    height:100%;
+}
+.col-5{
+    overflow:  hidden !important;
+}
+.parent {
+    width: 100%;
+     /* background-image: linear-gradient(
+        transparent 30%,
+        #fff 30%,
+        currentColor 30%,
+        transparent 86%
+    );*/
+     background-clip: text;
+    -webkit-background-clip: text; 
+     background-attachment: fixed;
+     background-image: linear-gradient(to bottom, #000000, #2e2e2e, #636363, #848484, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #3d3d3d, #0f081a, #0b0b17);
+}
+
+.p {
+    color: transparent;
+    margin-top: 2rem;
+    line-height: 2;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+    word-spacing: 3px;
+    font-size: 1.3rem;
+    padding-bottom: 35vh;
+}
+.row{
+
+height:100%;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    
+}
+#umbrella_container{
+    background-image: url(q02.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -652px -6px;
+    position: absolute;
+    left: -80px;
+    width: 700px;
+    height: 386px;
+}
+#umbrella_container .img {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    width: 350px;
+    height: 350px;
+}
+/* 
+@media (min-width: 1600px){
+     .img {
+        top: 23rem;
+     }
+}
+
+@media (max-width: 1900px ) and ( min-width:1599px){
+    .img {
+        top: 22rem;
+    }
+}
+
+@media (max-width: 1000px){
+    .col-7 {
+        overflow: auto;
+        height: 100%;
+        z-index: 5;
+        flex:0 0 100%;
+        max-width: 100%;
+    }
+    .img {
+        right: 2rem;
+        top: 24rem;
+    }
+}
+@media (max-width: 1400px){
+    .row{
+        background-position: bottom;
+    }
+} */
+
+
+
