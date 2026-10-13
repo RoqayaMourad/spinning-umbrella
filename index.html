@@ -3,76 +3,79 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Spinning Umbrella</title>
+    <meta name="description" content="A small GSAP scroll experiment. The red umbrella turns as you scroll the page.">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,800&display=swap">
     <link rel="stylesheet" href="style.css">
+
+    <script>
+        // "anim" switches on the tall scroll layout. "intro-pending" hides the
+        // title and artwork until the entrance animation takes over.
+        // Both are dropped again if GSAP fails to load.
+        (function () {
+            var root = document.documentElement;
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+            root.classList.add('anim', 'intro-pending');
+            setTimeout(function () {
+                root.classList.remove('intro-pending');
+            }, 3000);
+        })();
+    </script>
 </head>
 
 <body>
 
-    <section class="services p-5">
-        <div>
-            <div class="logo">
-                <img src="logo.png" width="250px" alt="">
-            </div>
-            <div class="link-name">
-                <h2>
-                    Services
-                </h2>
-            </div>
-            <div class="clearfix"></div>
-        </div>
+    <main class="stage">
+        <header class="masthead">
+            <h1 class="title">Spinning Umbrella</h1>
+        </header>
 
-        <div class="row mt-5 pt-4">
-            <div class="col-lg-7 col-12 content-col order-lg-first order-last" id="scrollElement">
-                <div class="parent">
-
-               
-                <h2 class="title" class="p">
-                    <span>PPC</span> SERVICES DESCRIPTION
-                </h2>
-                <P class="p" id="p">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus ab modi sequi delectus provident magni, perspiciatis suscipit ut quaerat nesciunt voluptas tempora eius reiciendis doloribus laudantium labore recusandae id! Minus, neque necessitatibus repellendus
-                    praesentium voluptatum numquam odit minima consequatur id perspiciatis accusamus cupiditate sed similique, voluptates voluptatibus rem dicta expedita. <br> Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Rerum optio magni cum, aut dolore amet porro perferendis laudantium rem? Optio rerum exercitationem ab nihil saepe quis consequuntur ipsa, voluptates dolor cupiditate quasi repudiandae officia quaerat error quod eum deserunt, explicabo
-                    in eos? Facilis, esse nulla? Quibusdam odit quisquam aperiam vel?
-                    <br> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, quidem fuga! Sequi, ullam vitae eius quae voluptatibus, sunt a cumque dolor earum nisi itaque optio inventore obcaecati animi illum, recusandae saepe sint maxime
-                    error aut temporibus! Temporibus animi quod aliquid.
-                    <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima beatae vel quis ipsa illum pariatur quasi minus dicta nihil accusamus corrupti et sit dignissimos velit, vitae earum similique illo autem.
-             
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus ab modi sequi delectus provident magni, perspiciatis suscipit ut quaerat nesciunt voluptas tempora eius reiciendis doloribus laudantium labore recusandae id! Minus, neque necessitatibus repellendus
-                    praesentium voluptatum numquam odit minima consequatur id perspiciatis accusamus cupiditate sed similique, voluptates voluptatibus rem dicta expedita. <br> Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Rerum optio magni cum, aut dolore amet porro perferendis laudantium rem? Optio rerum exercitationem ab nihil saepe quis consequuntur ipsa, voluptates dolor cupiditate quasi repudiandae officia quaerat error quod eum deserunt, explicabo
-                    in eos? Facilis, esse nulla? Quibusdam odit quisquam aperiam vel?
-                    <br> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, quidem fuga! Sequi, ullam vitae eius quae voluptatibus, sunt a cumque dolor earum nisi itaque optio inventore obcaecati animi illum, recusandae saepe sint maxime
-                    error aut temporibus! Temporibus animi quod aliquid.
-                    <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima beatae vel quis ipsa illum pariatur quasi minus dicta nihil accusamus corrupti et sit dignissimos velit, vitae earum similique illo autem. finalfinal
-                </P> 
-            </div>
-            </div>
-            <div class="col-lg-5 col-12 img-col order-lg-last order-first">
-                <div id="umbrella_container">
-                   <img src="q01.png" width="100%" class="img" alt="">
+        <div class="visual">
+            <div class="umbrella-reveal">
+                <div class="umbrella-art">
+                    <img src="umbrellas-navy.webp" width="764" height="603" class="umbrellas-navy" alt="">
+                    <img src="umbrella-red.webp" width="461" height="466" class="umbrella-red" alt="Open red umbrella seen from above, on top of a group of navy umbrellas">
                 </div>
             </div>
         </div>
-    </section>
 
+        <article class="copy">
+            <div class="step">
+                <section class="section">
+                    <div class="section-body">
+                        <h2>Scroll to spin</h2>
+                        <p>Scroll down and watch the red umbrella turn. Its rotation follows your progress through the page, moving forward as you move down.</p>
+                    </div>
+                </section>
+            </div>
+            <div class="step">
+                <section class="section">
+                    <div class="section-body">
+                        <h2>Change direction</h2>
+                        <p>Scroll back up and the umbrella turns the other way. You can move slowly, scroll faster, or pause anywhere to see how the motion responds.</p>
+                    </div>
+                </section>
+            </div>
+            <div class="step">
+                <section class="section">
+                    <div class="section-body">
+                        <h2>Follow the motion</h2>
+                        <p>As you scroll, each paragraph fades into view, stays for a moment, then fades out. The umbrella stays in place while the text moves through the page.</p>
+                    </div>
+                </section>
+            </div>
+        </article>
+    </main>
 
+    <p class="scroll-cue" aria-hidden="true">Scroll to spin</p>
 
-
-
-
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ==" crossorigin="anonymous" referrerpolicy="no-referrer" onerror="document.documentElement.classList.remove('anim', 'intro-pending')"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js" integrity="sha512-Q+G390ZU2qKo+e4q+kVcJknwfGjKJOdyu5mVMcR95NqL6XaF4lY4nsSvIVB3NDP54ACsS9rqhE1DVqgpApl//Q==" crossorigin="anonymous" referrerpolicy="no-referrer" onerror="document.documentElement.classList.remove('anim', 'intro-pending')"></script>
     <script src="script.js"></script>
 
 </body>
